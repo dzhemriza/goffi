@@ -5,13 +5,13 @@ The following is a list of these components (full copies of the license agreemen
 components are included in the subsequent directories):
 
 Goffi jars:
-- core-2.2.0.jar license: Apache License Version 2.0
-- fx-core-2.2.0.jar license: Apache License Version 2.0
-- toffi-2.2.0.jar license: Apache License Version 2.0
-- moffi-2.2.0.jar license: Apache License Version 2.0
-- my-vault-2.2.0.jar license: Apache License Version 2.0
-- text-encoder-2.2.0.jar license: Apache License Version 2.0
-- json-formatter-2.2.0.jar license: Apache License Version 2.0
+- core-2.3.0.jar license: Apache License Version 2.0
+- fx-core-2.3.0.jar license: Apache License Version 2.0
+- toffi-2.3.0.jar license: Apache License Version 2.0
+- moffi-2.3.0.jar license: Apache License Version 2.0
+- my-vault-2.3.0.jar license: Apache License Version 2.0
+- text-encoder-2.3.0.jar license: Apache License Version 2.0
+- json-formatter-2.3.0.jar license: Apache License Version 2.0
 
 Open Source Software Included:
 - animal-sniffer-annotations version: 1.14 license: MIT
