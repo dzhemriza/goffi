@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.goffi</groupId>
+    <artifactId>goffi</artifactId>
+    <version>2.2.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>11</jdk.version>
+        <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
+        <junit.version>4.12</junit.version>
+        <log4j.version>2.11.1</log4j.version>
+        <lmax.disruptor.version>3.4.2</lmax.disruptor.version>
+        <bouncy.castle.version>1.60</bouncy.castle.version>
+        <commons.codec.version>1.11</commons.codec.version>
+        <commons.io.version>2.6</commons.io.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <miglayout.version>3.7.4</miglayout.version>
+        <miglayout-javafx.version>5.2</miglayout-javafx.version>
+        <jackson-databind.version>2.9.8</jackson-databind.version>
+        <spring.version>5.1.0.RELEASE</spring.version>
+        <spring.shell.version>1.2.0.RELEASE</spring.shell.version>
+        <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
+        <maven.plugin.exec.version>1.6.0</maven.plugin.exec.version>
+        <assembly.maven.plugin>3.1.0</assembly.maven.plugin>
+        <mockito.version>2.22.0</mockito.version>
+        <guava.version>26.0-jre</guava.version>
+        <openjfx.version>11</openjfx.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>fx-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>core</artifactId>
+                <version>${project.version}</version>
+                <type>test-jar</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.miglayout</groupId>
+                <artifactId>miglayout</artifactId>
+                <version>${miglayout.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.miglayout</groupId>
+                <artifactId>miglayout-javafx</artifactId>
+                <version>${miglayout-javafx.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bouncy.castle.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons.codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.shell</groupId>
+                <artifactId>spring-shell</artifactId>
+                <version>${spring.shell.version}</version>
+            </dependency>
+
+            <!-- Log4j2 -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${lmax.disruptor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-controls</artifactId>
+                <version>${openjfx.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>org.goffi.core</module>
+        <module>org.goffi.fx.core</module>
+        <module>org.goffi.moffi</module>
+        <module>org.goffi.toffi</module>
+        <module>org.goffi.text.encoder</module>
+        <module>org.goffi.json.formatter</module>
+        <module>org.goffi.my.vault</module>
+        <module>release-bundle</module>
+    </modules>
+
+</project>

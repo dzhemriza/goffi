@@ -1,0 +1,7 @@
+#!/bin/bash
+# Script requires java executable to be already provided in the shell
+
+SCRIPT_DIR="$(cd "$( dirname "$0" )" && pwd)"
+
+java -cp "$SCRIPT_DIR/../lib/text-encoder/*" \
+  org.goffi.text.encoder.gui.App "$@"

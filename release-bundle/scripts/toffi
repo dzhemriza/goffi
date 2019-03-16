@@ -1,0 +1,8 @@
+#!/bin/bash
+# Script requires java executable to be already provided in the shell
+
+SCRIPT_DIR="$(cd "$( dirname "$0" )" && pwd)"
+
+java -cp "$SCRIPT_DIR/../lib/toffi/*" \
+  -Dlog4j.configurationFile=$SCRIPT_DIR/log4j2.xml \
+  org.goffi.toffi.App "$@"
